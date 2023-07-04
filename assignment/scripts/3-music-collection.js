@@ -80,3 +80,24 @@ showCollection(collection)
 findByArtist('Metallica');
 findByArtist('Chevelle');
 findByArtist('Muse');
+
+//- Create a function called `search`. This function should:
+  //- Take an input parameter for a search criteria object. Create your solution based on a search object that has these properties:
+  //```
+  //{ artist: 'Ray Charles', year: 1957 }
+ // ```
+  //- The returned output from `search` should meet these requirements:
+    //- Return a new array of all items in the `collection` matching *all* of the search criteria.
+    //- If no results are found, return an empty array.
+   // - If there is no search object or an empty search object provided as input, then return all albums in the `collection`.
+
+   function search( artist, year){
+    let searchResults = [];
+    for (let i = 0; i < collection.length; i++) {
+      if (artist === collection[i].artist && year === collection[i].year) {
+        searchResults.push(collection[i])
+      }console.log(searchResults);
+    }
+   }
+   search('Muse', 2022);
+   
