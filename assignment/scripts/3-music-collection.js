@@ -64,5 +64,19 @@ showCollection(collection)
   //- Return the array with the matching results. If no results are found, return an empty array.
 
   //- Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are found.
+  
+ 
+ 
 
+ function findByArtist(artistIn,) {
+  let results = [];
+  for (let i=0; i < collection.length; i++) {
+    if (artistIn === collection[i].artist) {
+      results.push(collection[i]);
+    } 
+  } console.log(results);
+ }
 
+findByArtist('Metallica');
+findByArtist('Chevelle');
+findByArtist('Muse');
