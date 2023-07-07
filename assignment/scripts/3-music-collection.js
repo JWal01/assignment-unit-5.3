@@ -96,8 +96,20 @@ findByArtist('Muse');
     for (let i = 0; i < collection.length; i++) {
       if (artist === collection[i].artist && year === collection[i].year) {
         searchResults.push(collection[i])
-      }console.log(searchResults);
+      }
     }
    }
    search('Muse', 2022);
+
+   function search(toSearch){
+    for (let i = 0; i < collection.length; i++) {
+      if(collection[i].artist === toSearch || collection[i].year === toSearch){
+        result.push(collection[i]);
+      }else if(collection[i].artist != toSearch && collection[i] != toSearch){
+        result = []
+      }else{
+      return collection
+      }
+    }
+   }
    
